@@ -717,7 +717,7 @@ export default function Home() {
                     <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted-foreground sm:text-[15px]">
                       Ask anything you want to
                       learn, explore, create, or
-                      understand. I'm here to
+                      understand. I&apos;m here to
                       help.
                     </p>
                   </div>
