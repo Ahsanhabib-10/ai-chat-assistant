@@ -1,0 +1,345 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+
+  --color-destructive: var(--destructive);
+
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.985 0.002 285);
+  --foreground: oklch(0.16 0.01 285);
+
+  --card: oklch(0.995 0.001 285);
+  --card-foreground: oklch(0.16 0.01 285);
+
+  --popover: oklch(0.995 0.001 285);
+  --popover-foreground: oklch(0.16 0.01 285);
+
+  --primary: oklch(0.18 0.015 285);
+  --primary-foreground: oklch(0.985 0.002 285);
+
+  --secondary: oklch(0.955 0.004 285);
+  --secondary-foreground: oklch(0.2 0.01 285);
+
+  --muted: oklch(0.955 0.004 285);
+  --muted-foreground: oklch(0.48 0.012 285);
+
+  --accent: oklch(0.95 0.006 285);
+  --accent-foreground: oklch(0.2 0.01 285);
+
+  --destructive: oklch(0.58 0.22 27);
+
+  --border: oklch(0.9 0.006 285);
+  --input: oklch(0.9 0.006 285);
+  --ring: oklch(0.65 0.02 285);
+
+  --chart-1: oklch(0.55 0.2 265);
+  --chart-2: oklch(0.65 0.15 165);
+  --chart-3: oklch(0.55 0.12 225);
+  --chart-4: oklch(0.75 0.16 85);
+  --chart-5: oklch(0.7 0.18 70);
+
+  --sidebar: oklch(0.975 0.003 285);
+  --sidebar-foreground: oklch(0.18 0.01 285);
+  --sidebar-primary: oklch(0.18 0.015 285);
+  --sidebar-primary-foreground: oklch(0.985 0.002 285);
+  --sidebar-accent: oklch(0.945 0.006 285);
+  --sidebar-accent-foreground: oklch(0.18 0.01 285);
+  --sidebar-border: oklch(0.9 0.006 285);
+  --sidebar-ring: oklch(0.65 0.02 285);
+}
+
+/* =========================================================
+   DARK THEME — ASIF GPT
+   ========================================================= */
+
+.dark {
+  --background: oklch(0.105 0.008 285);
+  --foreground: oklch(0.94 0.006 285);
+
+  --card: oklch(0.14 0.01 285);
+  --card-foreground: oklch(0.94 0.006 285);
+
+  --popover: oklch(0.145 0.012 285);
+  --popover-foreground: oklch(0.94 0.006 285);
+
+  --primary: oklch(0.93 0.006 285);
+  --primary-foreground: oklch(0.12 0.01 285);
+
+  --secondary: oklch(0.18 0.012 285);
+  --secondary-foreground: oklch(0.92 0.006 285);
+
+  --muted: oklch(0.17 0.01 285);
+  --muted-foreground: oklch(0.62 0.012 285);
+
+  --accent: oklch(0.2 0.014 285);
+  --accent-foreground: oklch(0.94 0.006 285);
+
+  --destructive: oklch(0.68 0.19 25);
+
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 11%);
+  --ring: oklch(0.62 0.018 285);
+
+  --chart-1: oklch(0.62 0.2 265);
+  --chart-2: oklch(0.7 0.15 165);
+  --chart-3: oklch(0.68 0.12 225);
+  --chart-4: oklch(0.78 0.16 85);
+  --chart-5: oklch(0.72 0.18 70);
+
+  --sidebar: oklch(0.085 0.008 285);
+  --sidebar-foreground: oklch(0.9 0.006 285);
+  --sidebar-primary: oklch(0.93 0.006 285);
+  --sidebar-primary-foreground: oklch(0.11 0.008 285);
+  --sidebar-accent: oklch(0.15 0.012 285);
+  --sidebar-accent-foreground: oklch(0.93 0.006 285);
+  --sidebar-border: oklch(1 0 0 / 7%);
+  --sidebar-ring: oklch(0.62 0.018 285);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: oklch(0.72 0.08 265 / 25%);
+    color: inherit;
+  }
+
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* =========================================================
+   PREMIUM SCROLLBARS
+   ========================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(1 0 0 / 12%) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: oklch(1 0 0 / 12%);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: oklch(1 0 0 / 20%);
+}
+
+/* =========================================================
+   AI WORKSPACE SURFACES
+   ========================================================= */
+
+.ai-surface {
+  background:
+    linear-gradient(
+      180deg,
+      oklch(1 0 0 / 2.5%),
+      oklch(1 0 0 / 0%)
+    ),
+    var(--background);
+}
+
+.ai-glass {
+  background: oklch(1 0 0 / 3%);
+  border: 1px solid oklch(1 0 0 / 8%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.ai-glow {
+  box-shadow:
+    0 0 0 1px oklch(1 0 0 / 4%),
+    0 12px 40px oklch(0 0 0 / 20%);
+}
+
+/* =========================================================
+   CHAT AREA
+   ========================================================= */
+
+.chat-background {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      oklch(1 0 0 / 3%),
+      transparent 35%
+    ),
+    var(--background);
+}
+
+/* =========================================================
+   MESSAGE TYPOGRAPHY
+   ========================================================= */
+
+.prose {
+  color: var(--foreground);
+}
+
+.prose p {
+  line-height: 1.75;
+}
+
+.prose strong {
+  font-weight: 650;
+}
+
+.prose a {
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   CODE BLOCKS
+   ========================================================= */
+
+pre {
+  border: 1px solid oklch(1 0 0 / 7%);
+}
+
+code {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+/* =========================================================
+   SUBTLE MOTION
+   ========================================================= */
+
+@keyframes ai-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-fade-in {
+  animation: ai-fade-in 0.3s ease-out;
+}
+
+@keyframes ai-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.ai-pulse {
+  animation: ai-pulse 1.6s ease-in-out infinite;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  body {
+    overscroll-behavior-y: none;
+  }
+
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+}
